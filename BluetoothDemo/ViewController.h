@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BluetoothManager.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, BluetoothManagerDelegate>
+{
+	BluetoothManager *btManager;
+}
+
+@property (nonatomic, strong) IBOutlet UITableView* tableView;
+
+-(IBAction)startScan:(id)sender;
 
 @end

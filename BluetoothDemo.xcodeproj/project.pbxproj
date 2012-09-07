@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000870BC15EFB05D001B9B97 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000870BB15EFB05D001B9B97 /* ServiceViewController.m */; };
+		000870C015EFFD2E001B9B97 /* CharacteristicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000870BF15EFFD2E001B9B97 /* CharacteristicViewController.m */; };
+		000870C315F67C36001B9B97 /* DescriptorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000870C215F67C36001B9B97 /* DescriptorViewController.m */; };
 		000D9D0C15E3DDF100547FFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D9D0B15E3DDF100547FFA /* UIKit.framework */; };
 		000D9D0E15E3DDF100547FFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D9D0D15E3DDF100547FFA /* Foundation.framework */; };
 		000D9D1015E3DDF100547FFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D9D0F15E3DDF100547FFA /* CoreGraphics.framework */; };
@@ -15,22 +18,39 @@
 		000D9D1C15E3DDF100547FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 000D9D1B15E3DDF100547FFA /* AppDelegate.m */; };
 		000D9D1F15E3DDF100547FFA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000D9D1D15E3DDF100547FFA /* MainStoryboard.storyboard */; };
 		000D9D2215E3DDF100547FFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000D9D2115E3DDF100547FFA /* ViewController.m */; };
+		0050E98D15E7C7A8001511EC /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050E98C15E7C7A8001511EC /* BluetoothManager.m */; };
+		0050E98F15E7CC6C001511EC /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0050E98E15E7CC6C001511EC /* CoreBluetooth.framework */; };
+		0050E99215E7CDA0001511EC /* BluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050E99115E7CDA0001511EC /* BluetoothPeripheral.m */; };
+		0050E99515EC08C1001511EC /* PeripheralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0050E99415EC08C1001511EC /* PeripheralViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000870BA15EFB05D001B9B97 /* ServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
+		000870BB15EFB05D001B9B97 /* ServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
+		000870BE15EFFD2E001B9B97 /* CharacteristicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacteristicViewController.h; sourceTree = "<group>"; };
+		000870BF15EFFD2E001B9B97 /* CharacteristicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacteristicViewController.m; sourceTree = "<group>"; };
+		000870C115F67C36001B9B97 /* DescriptorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptorViewController.h; sourceTree = "<group>"; };
+		000870C215F67C36001B9B97 /* DescriptorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptorViewController.m; sourceTree = "<group>"; };
 		000D9D0715E3DDF100547FFA /* BluetoothDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		000D9D0B15E3DDF100547FFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		000D9D0D15E3DDF100547FFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		000D9D0F15E3DDF100547FFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		000D9D1315E3DDF100547FFA /* BluetoothDemo-Info.plist */ = {isa = PBXFileReference; path = "BluetoothDemo-Info.plist"; sourceTree = "<group>"; };
+		000D9D1315E3DDF100547FFA /* BluetoothDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BluetoothDemo-Info.plist"; sourceTree = "<group>"; };
 		000D9D1515E3DDF100547FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		000D9D1715E3DDF100547FFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		000D9D1915E3DDF100547FFA /* BluetoothDemo-Prefix.pch */ = {isa = PBXFileReference; path = "BluetoothDemo-Prefix.pch"; sourceTree = "<group>"; };
-		000D9D1A15E3DDF100547FFA /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		000D9D1915E3DDF100547FFA /* BluetoothDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BluetoothDemo-Prefix.pch"; sourceTree = "<group>"; };
+		000D9D1A15E3DDF100547FFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		000D9D1B15E3DDF100547FFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		000D9D1E15E3DDF100547FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		000D9D2015E3DDF100547FFA /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		000D9D2015E3DDF100547FFA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		000D9D2115E3DDF100547FFA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0050E98B15E7C7A8001511EC /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
+		0050E98C15E7C7A8001511EC /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManager.m; sourceTree = "<group>"; };
+		0050E98E15E7CC6C001511EC /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0050E99015E7CDA0001511EC /* BluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothPeripheral.h; sourceTree = "<group>"; };
+		0050E99115E7CDA0001511EC /* BluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothPeripheral.m; sourceTree = "<group>"; };
+		0050E99315EC08C1001511EC /* PeripheralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeripheralViewController.h; sourceTree = "<group>"; };
+		0050E99415EC08C1001511EC /* PeripheralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeripheralViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0050E98F15E7CC6C001511EC /* CoreBluetooth.framework in Frameworks */,
 				000D9D0C15E3DDF100547FFA /* UIKit.framework in Frameworks */,
 				000D9D0E15E3DDF100547FFA /* Foundation.framework in Frameworks */,
 				000D9D1015E3DDF100547FFA /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +88,7 @@
 		000D9D0A15E3DDF100547FFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0050E98E15E7CC6C001511EC /* CoreBluetooth.framework */,
 				000D9D0B15E3DDF100547FFA /* UIKit.framework */,
 				000D9D0D15E3DDF100547FFA /* Foundation.framework */,
 				000D9D0F15E3DDF100547FFA /* CoreGraphics.framework */,
@@ -83,6 +105,18 @@
 				000D9D2015E3DDF100547FFA /* ViewController.h */,
 				000D9D2115E3DDF100547FFA /* ViewController.m */,
 				000D9D1215E3DDF100547FFA /* Supporting Files */,
+				0050E98B15E7C7A8001511EC /* BluetoothManager.h */,
+				0050E98C15E7C7A8001511EC /* BluetoothManager.m */,
+				0050E99015E7CDA0001511EC /* BluetoothPeripheral.h */,
+				0050E99115E7CDA0001511EC /* BluetoothPeripheral.m */,
+				0050E99315EC08C1001511EC /* PeripheralViewController.h */,
+				0050E99415EC08C1001511EC /* PeripheralViewController.m */,
+				000870BA15EFB05D001B9B97 /* ServiceViewController.h */,
+				000870BB15EFB05D001B9B97 /* ServiceViewController.m */,
+				000870BE15EFFD2E001B9B97 /* CharacteristicViewController.h */,
+				000870BF15EFFD2E001B9B97 /* CharacteristicViewController.m */,
+				000870C115F67C36001B9B97 /* DescriptorViewController.h */,
+				000870C215F67C36001B9B97 /* DescriptorViewController.m */,
 			);
 			path = BluetoothDemo;
 			sourceTree = "<group>";
@@ -164,6 +198,12 @@
 				000D9D1815E3DDF100547FFA /* main.m in Sources */,
 				000D9D1C15E3DDF100547FFA /* AppDelegate.m in Sources */,
 				000D9D2215E3DDF100547FFA /* ViewController.m in Sources */,
+				0050E98D15E7C7A8001511EC /* BluetoothManager.m in Sources */,
+				0050E99215E7CDA0001511EC /* BluetoothPeripheral.m in Sources */,
+				0050E99515EC08C1001511EC /* PeripheralViewController.m in Sources */,
+				000870BC15EFB05D001B9B97 /* ServiceViewController.m in Sources */,
+				000870C015EFFD2E001B9B97 /* CharacteristicViewController.m in Sources */,
+				000870C315F67C36001B9B97 /* DescriptorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +315,7 @@
 				000D9D2715E3DDF100547FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
