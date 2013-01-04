@@ -30,6 +30,7 @@
 		centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
 		_discoveredPerpherals = [[NSMutableArray alloc] init];
 		connectedPeripheral = nil;
+		
 	}
 	
 	return self;
@@ -59,10 +60,15 @@
 -(void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
 	NSLog(@"%s", __FUNCTION__);
+	if ( error )
+	{
+		NSLog(@"ERROR: %@", error);
+	}
 }
 
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
+	NSLog(@"%s", __FUNCTION__);
 	NSLog(@"Advertisement data: %@", advertisementData);
 	NSLog(@"Found peripheral: %@", [peripheral name]);
 	NSLog(@"Advertised name: %@", [advertisementData objectForKey:CBAdvertisementDataLocalNameKey]);
@@ -80,7 +86,7 @@
 	{
 		[delegate bluetoothManager:self didDiscoverPeripheral:btPeripheral];
 	}
-	NSLog(@"BT Name: %@", [btPeripheral getName]);
+//	NSLog(@"BT Name: %@", [btPeripheral getName]);
 	
 }
 
@@ -114,13 +120,14 @@
 		[centralManager cancelPeripheralConnection:connectedPeripheral.peripheral];
 		connectedPeripheral = nil;
 	}
-	NSDictionary	*options	= [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:CBCentralManagerScanOptionAllowDuplicatesKey];
+	NSDictionary	*options	= [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:CBCentralManagerScanOptionAllowDuplicatesKey];
 	NSLog(@"%s, %@ : %@", __FUNCTION__, centralManager, options);
 	[centralManager scanForPeripheralsWithServices:nil options:options];
 }
 
 -(void) connectToPeripheral:(BluetoothPeripheral*) peripheral
 {
+	NSLog(@"Connecting to peripheral... %@", peripheral);
 	if ( connectedPeripheral != nil )
 	{
 		[centralManager cancelPeripheralConnection:connectedPeripheral.peripheral];
@@ -129,6 +136,11 @@
 	[centralManager stopScan];
 	[centralManager connectPeripheral:peripheral.peripheral options:nil];
 	connectedPeripheral = peripheral;
+}
+
+-(void)disconnectPeripheral:(BluetoothPeripheral *)peripheral
+{
+	[centralManager cancelPeripheralConnection:peripheral.peripheral];
 }
 
 @end

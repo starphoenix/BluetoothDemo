@@ -16,7 +16,7 @@
 
 -(NSString *)getName
 {
-	return peripheral.name;
+	return (__bridge_transfer NSString *)CFUUIDCreateString(NULL, peripheral.UUID);;
 }
 
 -(id)initWithPeripheral:(CBPeripheral *)p

@@ -12,6 +12,9 @@
 @class BluetoothPeripheral;
 
 @interface PeripheralViewController : UITableViewController<BluetoothPeripheralDelegate> 
+- (IBAction)refresh:(UIRefreshControl*)ref;
+
+- (IBAction)disconnect:(id)sender;
 
 @property (weak, nonatomic) BluetoothPeripheral* peripheral;
 

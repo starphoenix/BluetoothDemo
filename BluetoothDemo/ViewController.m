@@ -11,6 +11,8 @@
 #import "BluetoothPeripheral.h"
 #import "PeripheralViewController.h"
 
+ViewController *inst;
+
 @interface ViewController ()
 
 @end
@@ -25,6 +27,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	btManager = [[BluetoothManager alloc] init];
 	btManager.delegate = self;
+	inst = self;
 }
 
 - (void)viewDidUnload
@@ -89,5 +92,10 @@
 -(void)bluetoothManager:(BluetoothManager *)bluetoothManager didConnectPeripheral:(BluetoothPeripheral *)peripheral
 {
 	[self performSegueWithIdentifier:@"MySegue" sender:self];
+}
+
++(BluetoothManager *)btInstance
+{
+	return inst->btManager;
 }
 @end

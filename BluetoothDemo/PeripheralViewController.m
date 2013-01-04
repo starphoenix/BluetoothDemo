@@ -9,6 +9,7 @@
 #import "PeripheralViewController.h"
 #import "BluetoothPeripheral.h"
 #import "ServiceViewController.h"
+#import "ViewController.h"
 
 @interface PeripheralViewController ()
 
@@ -52,6 +53,8 @@
 	aPeripheral.delegate = self;
 	
 	[peripheral scanForServices];
+	
+	[self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -217,4 +220,15 @@
      */
 }
 
+- (IBAction)refresh:(UIRefreshControl*)ref
+{
+	[peripheral scanForServices];
+	[ref endRefreshing];
+}
+
+- (IBAction)disconnect:(id)sender
+{
+	[[ViewController btInstance] disconnectPeripheral:peripheral];
+	[self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

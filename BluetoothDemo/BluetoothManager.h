@@ -32,5 +32,6 @@
 
 -(void) scanForPeripherals;
 -(void) connectToPeripheral:(BluetoothPeripheral*)peripheral;
+-(void) disconnectPeripheral:(BluetoothPeripheral*)peripheral;
 
 @end

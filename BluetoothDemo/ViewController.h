@@ -18,4 +18,6 @@
 
 -(IBAction)startScan:(id)sender;
 
++(BluetoothManager*) btInstance;
+
 @end
